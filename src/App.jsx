@@ -14,11 +14,12 @@ function App() {
   // Bonus
   const changeName = (e) => {
     e.preventDefault(); 
+    // newName ? setName(newName) : null
 
-    if (newName.trim() !== '') {
-        setName(newName);   // actualiza el nombre con el valor del input
-        setNewName('');     // limpia el input
-      }
+    if (newName.trim()) { // elimina espacios 
+      setName(newName);   // actualiza el nombre con el valor del input
+      setNewName('');     // limpia el input
+    }
   };
 
   return (
